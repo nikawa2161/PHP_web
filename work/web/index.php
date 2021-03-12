@@ -1,3 +1,9 @@
+<?php
+
+$today = date('Y-m-d H:i:s l');
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,5 +14,6 @@
   <p>Hello, PHP!</p>
   <!-- 今日の日時と曜日を表示 -->
   <p>Today: <?php echo date('Y-m-d H:i:s l')?></p>
+  <p>Today: <?= $today; ?></p>
 </body>
 </html>
