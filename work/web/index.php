@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <title>PHP Practice</title>
-</head>
-<body>
-  <p>Hello, PHP!</p>
-  <!-- 今日の日時と曜日を表示 -->
-  <p>Today: <?php echo date('Y-m-d H:i:s l')?></p>
-</body>
-</html>
+<?php
+
+require ('../app/functions.php');
+
+include ('../app/_parts/_header.php');
+
+?>
+
+<form action="result.php" method="get">
+  <select name="messages[]" multiple >
+    <option value="hello">こんにちは</option>
+    <option value="good nigjt">おやすみなさい</option>
+    <option value="mazika!!">まじか！！！</option>
+  </select>
+  <button>ボタン</button>
+</form>
+
+<?php
+ include ('../app/_parts/_footer.php');
