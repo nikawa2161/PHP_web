@@ -7,7 +7,11 @@ include ('../app/_parts/_header.php');
 ?>
 
 <form action="result.php" method="get">
-  <textarea name="message"></textarea>
+  <select name="message" >
+    <option value="hello">こんにちは</option>
+    <option value="good nigjt">おやすみなさい</option>
+    <option value="mazika!!">まじか！！！</option>
+  </select>
   <button>ボタン</button>
 </form>
 
