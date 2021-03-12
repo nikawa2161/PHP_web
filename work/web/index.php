@@ -1,6 +1,8 @@
 <?php
 
-$today = date('Y-m-d H:i:s l');
+require ('../app/functions.php');
+
+$name = '文字列を表示しています<script>alert(1234);</script>';
 
 ?>
 
@@ -13,7 +15,6 @@ $today = date('Y-m-d H:i:s l');
 <body>
   <p>Hello, PHP!</p>
   <!-- 今日の日時と曜日を表示 -->
-  <p>Today: <?php echo date('Y-m-d H:i:s l')?></p>
-  <p>Today: <?= $today; ?></p>
+  <p>Today: <?= h($name); ?></p>
 </body>
 </html>
