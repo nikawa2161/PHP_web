@@ -7,7 +7,7 @@ include ('../app/_parts/_header.php');
 ?>
 
 <form action="result.php" method="get">
-  <select name="message" >
+  <select name="messages[]" multiple >
     <option value="hello">こんにちは</option>
     <option value="good nigjt">おやすみなさい</option>
     <option value="mazika!!">まじか！！！</option>
