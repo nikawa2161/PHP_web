@@ -16,13 +16,13 @@ $names = [
 </head>
 <body>
   <ul>
-    <?php if(empty($names)) {?>
+    <?php if (empty($names)): ?>
       <li>配列に要素が入っていません</li>
-    <?php }else { ?>
-      <?php foreach ($names as $name) { ?>
+    <?php else: ?>
+      <?php foreach ($names as $name): ?>
         <li><?= h($name); ?></li>
-      <?php } ?>
-    <?php } ?>
+      <?php endforeach; ?>
+    <?php endif; ?>
 
   </ul>
 </body>
