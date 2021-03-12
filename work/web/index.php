@@ -2,7 +2,9 @@
 
 require ('../app/functions.php');
 
-$name = '文字列を表示しています<script>alert(1234);</script>';
+$names = [
+  'Taro', 'Jiro', 'Saburo'
+  ];
 
 ?>
 
@@ -13,8 +15,15 @@ $name = '文字列を表示しています<script>alert(1234);</script>';
   <title>PHP Practice</title>
 </head>
 <body>
-  <p>Hello, PHP!</p>
-  <!-- 今日の日時と曜日を表示 -->
-  <p>Today: <?= h($name); ?></p>
+  <ul>
+    <?php if(empty($names)) {?>
+      <li>配列に要素が入っていません</li>
+    <?php }else { ?>
+      <?php foreach ($names as $name) { ?>
+        <li><?= h($name); ?></li>
+      <?php } ?>
+    <?php } ?>
+
+  </ul>
 </body>
 </html>
